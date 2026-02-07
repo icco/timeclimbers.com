@@ -1,3 +1,5 @@
+import { BoltIcon, PaintBrushIcon, LockClosedIcon, DevicePhoneMobileIcon } from '@heroicons/react/24/solid';
+
 export default function Home() {
   return (
     <div className="min-h-screen">
@@ -10,7 +12,6 @@ export default function Home() {
           <ul className="menu menu-horizontal px-1">
             <li><a href="#services">Services</a></li>
             <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
           </ul>
         </div>
       </div>
@@ -24,7 +25,6 @@ export default function Home() {
               We create exceptional web and mobile applications that drive business growth and delight users
             </p>
             <div className="flex gap-4 justify-center">
-              <a href="#contact" className="btn btn-primary btn-lg">Get Started</a>
               <a href="#services" className="btn btn-secondary btn-lg">Our Services</a>
             </div>
           </div>
@@ -73,29 +73,29 @@ export default function Home() {
           <h2 className="text-4xl font-bold text-center mb-12">Why Choose Us</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="text-center">
-              <div className="bg-primary text-primary-content w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl">
-                ⚡
+              <div className="bg-primary text-primary-content w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <BoltIcon className="w-8 h-8" />
               </div>
               <h3 className="font-bold text-lg mb-2">Fast Delivery</h3>
               <p className="text-sm">Quick turnaround without compromising quality</p>
             </div>
             <div className="text-center">
-              <div className="bg-secondary text-secondary-content w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl">
-                🎨
+              <div className="bg-secondary text-secondary-content w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <PaintBrushIcon className="w-8 h-8" />
               </div>
               <h3 className="font-bold text-lg mb-2">Modern Design</h3>
               <p className="text-sm">Beautiful, user-friendly interfaces</p>
             </div>
             <div className="text-center">
-              <div className="bg-accent text-accent-content w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl">
-                🔒
+              <div className="bg-accent text-accent-content w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <LockClosedIcon className="w-8 h-8" />
               </div>
               <h3 className="font-bold text-lg mb-2">Secure</h3>
               <p className="text-sm">Built with security best practices</p>
             </div>
             <div className="text-center">
-              <div className="bg-info text-info-content w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl">
-                📱
+              <div className="bg-info text-info-content w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <DevicePhoneMobileIcon className="w-8 h-8" />
               </div>
               <h3 className="font-bold text-lg mb-2">Responsive</h3>
               <p className="text-sm">Works perfectly on all devices</p>
@@ -123,46 +123,12 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Contact Section */}
-      <section id="contact" className="py-20 bg-base-200">
-        <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-12">Get In Touch</h2>
-          <div className="max-w-2xl mx-auto">
-            <div className="card bg-base-100 shadow-xl">
-              <div className="card-body">
-                <form className="space-y-4">
-                  <div className="form-control">
-                    <label className="label">
-                      <span className="label-text">Name</span>
-                    </label>
-                    <input type="text" placeholder="Your name" className="input input-bordered" />
-                  </div>
-                  <div className="form-control">
-                    <label className="label">
-                      <span className="label-text">Email</span>
-                    </label>
-                    <input type="email" placeholder="your@email.com" className="input input-bordered" />
-                  </div>
-                  <div className="form-control">
-                    <label className="label">
-                      <span className="label-text">Message</span>
-                    </label>
-                    <textarea className="textarea textarea-bordered h-32" placeholder="Tell us about your project"></textarea>
-                  </div>
-                  <button type="submit" className="btn btn-primary btn-block">Send Message</button>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Footer */}
       <footer className="footer footer-center p-10 bg-base-100 text-base-content">
         <aside>
           <p className="font-bold text-xl">TimeClimbers</p>
           <p>Building the future, one app at a time</p>
-          <p>© 2024 TimeClimbers. All rights reserved.</p>
+          <p>© 2026 TimeClimbers. All rights reserved.</p>
         </aside>
       </footer>
     </div>
