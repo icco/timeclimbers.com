@@ -49,4 +49,9 @@ EXPOSE 8080
 ENV PORT=8080
 ENV HOSTNAME="0.0.0.0"
 
+# Stable Server Actions encryption key so action IDs work across restarts/rebuilds.
+# Required when self-hosting to avoid "Failed to find Server Action" errors.
+# Override at runtime if you need a custom key (e.g. from secrets).
+ENV NEXT_SERVER_ACTIONS_ENCRYPTION_KEY="SBIYpAXfpZdN1p4fCOviAA=="
+
 CMD ["node", "server.js"]
