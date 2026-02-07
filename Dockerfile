@@ -3,11 +3,10 @@ FROM node:25-alpine AS base
 
 # Install dependencies only when needed
 FROM base AS deps
-RUN apk add --no-cache libc6-compat
 WORKDIR /app
 
 # Install dependencies using yarn
-COPY package.json yarn.lock* ./
+COPY package.json yarn.lock ./
 RUN corepack enable && yarn install --frozen-lockfile
 
 # Rebuild the source code only when needed
@@ -19,7 +18,7 @@ COPY . .
 
 # Build the application
 ENV NEXT_TELEMETRY_DISABLED=1
-RUN yarn build
+RUN corepack enable && yarn build
 
 # Production image
 FROM base AS runner
