@@ -1,27 +1,13 @@
 # syntax=docker/dockerfile:1
-# =============================================================================
-# Etu Server - Next.js Full Stack Application
-# =============================================================================
-
 FROM node:25-alpine AS base
 
 # Install dependencies only when needed
 FROM base AS deps
-RUN apk add --no-cache libc6-compat
 WORKDIR /app
 
-# Install dependencies
-# NPM_TOKEN is required for @icco/etu-proto from GitHub Packages (use secrets, not build-args)
-COPY package.json yarn.lock* .npmrc ./
-RUN --mount=type=secret,id=npm_token \
-    if [ ! -s /run/secrets/npm_token ]; then \
-      echo "ERROR: NPM_TOKEN secret is required for @icco/etu-proto"; \
-      echo "Usage: docker build --secret id=npm_token,env=NPM_TOKEN ..."; \
-      exit 1; \
-    fi && \
-    echo "//npm.pkg.github.com/:_authToken=$(cat /run/secrets/npm_token)" >> .npmrc && \
-    yarn install --frozen-lockfile && \
-    rm -f .npmrc
+# Install dependencies using yarn
+COPY package.json yarn.lock ./
+RUN yarn install --frozen-lockfile
 
 # Rebuild the source code only when needed
 FROM base AS builder
@@ -44,8 +30,15 @@ ENV NEXT_TELEMETRY_DISABLED=1
 RUN addgroup --system --gid 1001 nodejs
 RUN adduser --system --uid 1001 nextjs
 
-# Copy built application
-COPY --from=builder /app/public ./public
+# Create public directory
+RUN mkdir -p public
+
+# Set the correct permission for prerender cache
+RUN mkdir .next
+RUN chown nextjs:nodejs .next
+
+# Automatically leverage output traces to reduce image size
+# https://nextjs.org/docs/advanced-features/output-file-tracing
 COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
 COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
 
