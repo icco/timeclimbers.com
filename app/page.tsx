@@ -1,4 +1,5 @@
 import { BoltIcon, PaintBrushIcon, LockClosedIcon, DevicePhoneMobileIcon } from '@heroicons/react/24/solid';
+import ThemeToggle from '@/components/ThemeToggle';
 
 export default function Home() {
   return (
@@ -13,6 +14,9 @@ export default function Home() {
             <li><a href="#services">Services</a></li>
             <li><a href="#about">About</a></li>
           </ul>
+        </div>
+        <div className="flex-none mr-4">
+          <ThemeToggle />
         </div>
       </div>
 
