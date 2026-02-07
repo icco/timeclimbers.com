@@ -1,0 +1,9 @@
+{
+  "name": "timeclimbers.com",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:icco/timeclimbers.com.git",
+  "author": "Nat Welch <nat@natwelch.com>",
+  "license": "UNLICENSED",
+  "private": true
+}
