@@ -7,7 +7,7 @@ WORKDIR /app
 
 # Install dependencies using yarn
 COPY package.json yarn.lock ./
-RUN corepack enable && yarn install --frozen-lockfile
+RUN yarn install --frozen-lockfile
 
 # Rebuild the source code only when needed
 FROM base AS builder
@@ -18,7 +18,7 @@ COPY . .
 
 # Build the application
 ENV NEXT_TELEMETRY_DISABLED=1
-RUN corepack enable && yarn build
+RUN yarn build
 
 # Production image
 FROM base AS runner
@@ -30,7 +30,8 @@ ENV NEXT_TELEMETRY_DISABLED=1
 RUN addgroup --system --gid 1001 nodejs
 RUN adduser --system --uid 1001 nextjs
 
-COPY --from=builder /app/public ./public
+# Create public directory
+RUN mkdir -p public
 
 # Set the correct permission for prerender cache
 RUN mkdir .next
