@@ -49,9 +49,9 @@ EXPOSE 8080
 ENV PORT=8080
 ENV HOSTNAME="0.0.0.0"
 
-# Stable Server Actions encryption key so action IDs work across restarts/rebuilds.
-# Required when self-hosting to avoid "Failed to find Server Action" errors.
-# Override at runtime if you need a custom key (e.g. from secrets).
-ENV NEXT_SERVER_ACTIONS_ENCRYPTION_KEY="SBIYpAXfpZdN1p4fCOviAA=="
+# NEXT_SERVER_ACTIONS_ENCRYPTION_KEY must be set at runtime via an environment
+# variable or Docker secret — NOT baked into the image.
+# See: https://nextjs.org/docs/app/building-your-application/data-fetching/server-actions-and-mutations#encryption
+# Example: docker run -e NEXT_SERVER_ACTIONS_ENCRYPTION_KEY="$(openssl rand -base64 16)" ...
 
 CMD ["node", "server.js"]
