@@ -22,6 +22,9 @@ RUN yarn build
 
 # Production image
 FROM base AS runner
+
+LABEL org.opencontainers.image.source=https://github.com/icco/timeclimbers.com
+LABEL org.opencontainers.image.description="Marketing website for TimeClimbers; a Next.js + Tailwind CSS landing page for a small web/mobile app studio."
 WORKDIR /app
 
 ENV NODE_ENV=production
