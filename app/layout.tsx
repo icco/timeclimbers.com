@@ -1,10 +1,48 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
+import { Geist, Geist_Mono } from "next/font/google";
+import { ThemeProvider } from "@icco/react-common/ThemeProvider";
+import { WebVitals } from "@icco/react-common/WebVitals";
+
 import "./globals.css";
-import { ThemeProvider } from "@/components/ThemeProvider";
+
+const geistSans = Geist({
+  variable: "--font-sans",
+  subsets: ["latin"],
+});
+
+const geistMono = Geist_Mono({
+  variable: "--font-mono",
+  subsets: ["latin"],
+});
 
 export const metadata: Metadata = {
-  title: "TimeClimbers - Web & Mobile App Development",
-  description: "Building exceptional web and mobile applications for businesses of all sizes",
+  metadataBase: new URL("https://timeclimbers.com"),
+  title: {
+    default: "TimeClimbers — Independent app studio",
+    template: "%s · TimeClimbers",
+  },
+  description:
+    "TimeClimbers is a small, senior app studio building exceptional web and mobile products for ambitious teams.",
+  openGraph: {
+    title: "TimeClimbers — Independent app studio",
+    description:
+      "We design, build, and ship web and mobile products for ambitious teams.",
+    url: "https://timeclimbers.com",
+    siteName: "TimeClimbers",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "TimeClimbers — Independent app studio",
+    description:
+      "We design, build, and ship web and mobile products for ambitious teams.",
+  },
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
 };
 
 export default function RootLayout({
@@ -13,9 +51,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className="antialiased">
+    <html
+      lang="en"
+      className={`${geistSans.variable} ${geistMono.variable}`}
+      suppressHydrationWarning
+    >
+      <body className="antialiased font-sans bg-base-100 text-base-content">
         <ThemeProvider defaultTheme="system" enableSystem>
+          <WebVitals analyticsPath="/analytics/timeclimbers" />
           {children}
         </ThemeProvider>
       </body>
