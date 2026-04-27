@@ -22,6 +22,9 @@ RUN yarn build
 
 # Production image
 FROM base AS runner
+
+LABEL org.opencontainers.image.source=https://github.com/icco/timeclimbers.com
+LABEL org.opencontainers.image.description="ghcr.io/icco/timeclimbers.com container image"
 WORKDIR /app
 
 ENV NODE_ENV=production
