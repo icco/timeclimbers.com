@@ -5,9 +5,14 @@ FROM node:25-alpine AS base
 FROM base AS deps
 WORKDIR /app
 
-# Install dependencies using yarn
-COPY package.json yarn.lock ./
-RUN yarn install --frozen-lockfile
+# Install dependencies using yarn. @icco/react-common is published to
+# GitHub Packages, so we mount a token at build time and append the
+# auth header to .npmrc, then drop it before the layer is committed.
+COPY package.json yarn.lock .npmrc .yarnrc ./
+RUN --mount=type=secret,id=npm_token \
+    echo "//npm.pkg.github.com/:_authToken=$(cat /run/secrets/npm_token)" >> .npmrc && \
+    yarn install --frozen-lockfile --ignore-engines && \
+    rm -f .npmrc
 
 # Rebuild the source code only when needed
 FROM base AS builder
