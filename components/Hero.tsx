@@ -25,10 +25,10 @@ export default function Hero() {
 
           <div className="mt-10 flex flex-wrap items-center gap-4">
             <a
-              href="mailto:hello@timeclimbers.com"
+              href="#capabilities"
               className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-3 text-sm font-medium text-primary-content transition-transform hover:-translate-y-0.5"
             >
-              Get in touch
+              What we build
               <ArrowRightIcon className="h-4 w-4" />
             </a>
             <a

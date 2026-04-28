@@ -36,12 +36,6 @@ export default function Nav() {
 
         <div className="ml-auto flex items-center gap-3">
           <ThemeToggle className="swap swap-rotate text-base-content/70 hover:text-base-content" />
-          <a
-            href="mailto:hello@timeclimbers.com"
-            className="hidden rounded-full border border-base-content/15 px-4 py-2 text-sm font-medium text-base-content transition-colors hover:border-base-content/40 hover:bg-base-200/80 sm:inline-flex"
-          >
-            Contact
-          </a>
         </div>
       </div>
     </header>
