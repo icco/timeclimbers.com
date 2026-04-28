@@ -28,6 +28,9 @@
     "tailwindcss": "^4",
     "typescript": "^6.0.2"
   },
+  "resolutions": {
+    "postcss": "^8.5.10"
+  },
   "repository": "git@github.com:icco/timeclimbers.com.git",
   "author": "Nat Welch <nat@natwelch.com>",
   "license": "UNLICENSED"
