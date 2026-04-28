@@ -1,23 +1,23 @@
 const steps = [
   {
-    name: "Discover",
+    name: "Frame",
     detail:
-      "A focused kickoff to map the problem, the people, and the constraints. Output: a written brief we both sign off on.",
+      "We start by writing the problem down. What changes for a person using this? What does it stop us from doing later?",
   },
   {
     name: "Design",
     detail:
-      "Lo-fi wires, then high-fidelity flows. Decisions captured in writing so the team can argue with the design, not the designer.",
+      "Lo-fi sketches before pixels. Decisions captured in writing so the team can argue with the design, not the designer.",
   },
   {
     name: "Build",
     detail:
-      "Weekly demos against the brief. You're never more than five working days away from clicking the latest version.",
+      "Weekly demos against the brief. Production from day one, with the same monitoring and review the rest of our software gets.",
   },
   {
-    name: "Launch",
+    name: "Run",
     detail:
-      "Boring deploy, real monitoring, and a handover playbook. We stay on retainer if you want a steady hand for what's next.",
+      "Once it ships, we keep running it. New features land in small, reversible increments and the on-call rotation includes everyone.",
   },
 ];
 
@@ -27,14 +27,14 @@ export default function Process() {
       <div className="mx-auto max-w-6xl px-6 py-24 md:py-32">
         <div className="max-w-2xl">
           <span className="text-xs tracking-wide text-base-content/50 uppercase">
-            Process
+            How we work
           </span>
           <h2 className="mt-3 text-3xl leading-tight font-semibold tracking-tight text-balance md:text-4xl">
-            Four steps. No theatre.
+            Four phases, no theatre.
           </h2>
           <p className="mt-4 text-base text-base-content/70 md:text-lg">
-            Every engagement runs the same way, whether it&rsquo;s a four-week
-            sprint or a year-long partnership.
+            Every product we ship moves through the same four phases. Small
+            steps, frequent demos, real users in the loop.
           </p>
         </div>
 

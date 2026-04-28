@@ -1,38 +1,41 @@
 const values = [
   {
-    title: "Senior-only team",
-    body: "Every hour billed is a senior hour. No mystery juniors learning on your project, no offshore handoffs, no account managers.",
+    title: "Small by design",
+    body: "We stay small on purpose. Every person on a project is on every project, and the people who plan the work are the people who write the code.",
   },
   {
-    title: "Tools you already use",
-    body: "We meet your team in Linear, Slack, Figma, and GitHub. Less ceremony, more visibility into what's actually happening.",
+    title: "Built to last",
+    body: "We pick boring, well-understood tools. The software we ship today should still be easy to change in five years.",
   },
   {
-    title: "Ship in weeks",
-    body: "We default to small, demoable scope. The first end-to-end version is in your hands within four weeks of kickoff.",
+    title: "Writing first",
+    body: "Decisions live in writing, not in slack threads. It keeps the company honest and makes onboarding feel like reading a book.",
   },
   {
-    title: "Honest scoping",
-    body: "If the project doesn't fit us, we'll tell you and recommend someone better. Most engagements start with a paid discovery week.",
+    title: "Quietly opinionated",
+    body: "TypeScript, Next.js, Go, GCP, Cloudflare. We have favorites and we use them, but we will tell you why.",
   },
 ];
 
-export default function Approach() {
+export default function About() {
   return (
-    <section id="approach" className="border-b border-base-300/60 bg-base-200/40">
+    <section
+      id="about"
+      className="border-b border-base-300/60 bg-base-200/40"
+    >
       <div className="mx-auto max-w-6xl px-6 py-24 md:py-32">
         <div className="grid grid-cols-1 gap-12 md:grid-cols-12">
           <div className="md:col-span-5">
             <span className="text-xs tracking-wide text-base-content/50 uppercase">
-              Approach
+              About us
             </span>
             <h2 className="mt-3 text-3xl leading-tight font-semibold tracking-tight text-balance md:text-4xl">
-              How we work, in plain English.
+              A software company, built like a software product.
             </h2>
             <p className="mt-6 text-base text-base-content/70 md:text-lg">
-              TimeClimbers exists because we wanted to build software the way
-              we&rsquo;d want it built for us &mdash; small team, real
-              ownership, clear writing.
+              TimeClimbers is a small company making web and mobile
+              applications. We were founded in 2024 and we still answer our own
+              support email.
             </p>
           </div>
 

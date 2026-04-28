@@ -2,33 +2,33 @@ import {
   CloudIcon,
   CodeBracketSquareIcon,
   DevicePhoneMobileIcon,
-  LightBulbIcon,
+  PaintBrushIcon,
 } from "@heroicons/react/24/outline";
 
 const capabilities = [
   {
     icon: CodeBracketSquareIcon,
-    name: "Web platforms",
+    name: "Web applications",
     description:
-      "Marketing sites, dashboards, and internal tools built with Next.js, TypeScript, and a design system you'll actually want to extend.",
+      "Marketing sites, dashboards, and internal tools built with Next.js and TypeScript on a design system we extend across every product.",
   },
   {
     icon: DevicePhoneMobileIcon,
-    name: "Mobile apps",
+    name: "Mobile applications",
     description:
-      "Native and cross-platform apps for iOS and Android, designed for daily use and shipped through the stores we already know inside out.",
+      "Native and cross-platform apps for iOS and Android, designed for daily use and shipped through stores we have been publishing to for years.",
   },
   {
     icon: CloudIcon,
     name: "Cloud & infrastructure",
     description:
-      "Pragmatic infra on GCP, Cloudflare, and Fly. Boring deploy pipelines, clear observability, and runbooks that survive your first incident.",
+      "Boring, well-instrumented infrastructure on GCP, Cloudflare, and Fly. Clear pipelines, real observability, and runbooks the on-call can read at 3am.",
   },
   {
-    icon: LightBulbIcon,
-    name: "Product strategy",
+    icon: PaintBrushIcon,
+    name: "Product design",
     description:
-      "Short, opinionated sprints to get from rough idea to a buildable plan. Honest scoping, clear trade-offs, no decks for the sake of decks.",
+      "Interfaces, brands, and design systems that hold up across web and mobile. We design the things we build, end to end.",
   },
 ];
 
@@ -42,15 +42,15 @@ export default function Capabilities() {
         <div className="flex flex-col items-start justify-between gap-10 md:flex-row md:items-end">
           <div className="max-w-xl">
             <span className="text-xs tracking-wide text-base-content/50 uppercase">
-              Capabilities
+              What we build
             </span>
             <h2 className="mt-3 text-3xl leading-tight font-semibold tracking-tight text-balance md:text-4xl">
-              A small team that handles the whole stack.
+              A studio that owns the whole stack.
             </h2>
           </div>
           <p className="max-w-md text-base text-base-content/70 md:text-lg">
-            We work end-to-end so you don&rsquo;t have to choreograph a dozen
-            specialists. Pick one capability or all four.
+            Every TimeClimbers product is designed, built, and operated by the
+            same small team.
           </p>
         </div>
 

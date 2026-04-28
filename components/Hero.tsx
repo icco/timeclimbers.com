@@ -7,36 +7,35 @@ export default function Hero() {
         <div className="max-w-3xl">
           <span className="inline-flex items-center gap-2 rounded-full border border-base-content/15 bg-base-200/60 px-3 py-1 text-xs font-medium tracking-wide text-base-content/70 uppercase">
             <span className="h-1.5 w-1.5 rounded-full bg-primary" />
-            Independent app studio
+            App studio
           </span>
 
           <h1 className="mt-8 text-5xl leading-[1.05] font-semibold tracking-tight text-balance md:text-7xl">
-            We design and build the apps your team actually{" "}
+            We build modern apps people use{" "}
             <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
-              ships
+              every day
             </span>
             .
           </h1>
 
           <p className="mt-8 max-w-2xl text-lg text-pretty text-base-content/70 md:text-xl">
-            TimeClimbers is a small, senior studio for ambitious teams. We
-            partner with founders and product leaders to ship web and mobile
-            products in weeks, not quarters.
+            TimeClimbers is a small software company making web and mobile
+            applications. We design, build, and run the things we ship.
           </p>
 
           <div className="mt-10 flex flex-wrap items-center gap-4">
             <a
-              href="mailto:hello@timeclimbers.com?subject=New%20project"
+              href="mailto:hello@timeclimbers.com"
               className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-3 text-sm font-medium text-primary-content transition-transform hover:-translate-y-0.5"
             >
-              Start a project
+              Get in touch
               <ArrowRightIcon className="h-4 w-4" />
             </a>
             <a
-              href="#work"
+              href="#about"
               className="inline-flex items-center gap-2 rounded-full border border-base-content/15 px-5 py-3 text-sm font-medium text-base-content transition-colors hover:border-base-content/40 hover:bg-base-200/80"
             >
-              See selected work
+              About the company
             </a>
           </div>
 
@@ -51,18 +50,18 @@ export default function Hero() {
             </div>
             <div>
               <dt className="text-xs tracking-wide text-base-content/50 uppercase">
-                Engagements
+                Platforms
               </dt>
               <dd className="mt-1 text-2xl font-semibold tracking-tight">
-                Senior&#8209;only
+                Web &middot; iOS &middot; Android
               </dd>
             </div>
             <div>
               <dt className="text-xs tracking-wide text-base-content/50 uppercase">
-                Cadence
+                Built on
               </dt>
               <dd className="mt-1 text-2xl font-semibold tracking-tight">
-                Weeks, not quarters
+                TypeScript &amp; Go
               </dd>
             </div>
           </dl>

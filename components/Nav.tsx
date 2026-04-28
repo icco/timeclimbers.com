@@ -2,10 +2,9 @@ import ThemeToggle from "@icco/react-common/ThemeToggle";
 import Link from "next/link";
 
 const navLinks = [
-  { name: "Work", href: "#work" },
-  { name: "Capabilities", href: "#capabilities" },
-  { name: "Process", href: "#process" },
-  { name: "Approach", href: "#approach" },
+  { name: "What we build", href: "#capabilities" },
+  { name: "How we work", href: "#process" },
+  { name: "About", href: "#about" },
 ];
 
 export default function Nav() {
@@ -38,10 +37,10 @@ export default function Nav() {
         <div className="ml-auto flex items-center gap-3">
           <ThemeToggle className="swap swap-rotate text-base-content/70 hover:text-base-content" />
           <a
-            href="mailto:hello@timeclimbers.com?subject=New%20project"
+            href="mailto:hello@timeclimbers.com"
             className="hidden rounded-full border border-base-content/15 px-4 py-2 text-sm font-medium text-base-content transition-colors hover:border-base-content/40 hover:bg-base-200/80 sm:inline-flex"
           >
-            Start a project
+            Contact
           </a>
         </div>
       </div>

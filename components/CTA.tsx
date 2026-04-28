@@ -7,28 +7,24 @@ export default function CTA() {
         <div className="hero-gradient relative overflow-hidden rounded-3xl border border-base-300/60 bg-base-200/40 px-8 py-16 md:px-16 md:py-24">
           <div className="relative max-w-3xl">
             <span className="text-xs tracking-wide text-base-content/50 uppercase">
-              Let&rsquo;s build something
+              Get in touch
             </span>
             <h2 className="mt-3 text-3xl leading-tight font-semibold tracking-tight text-balance md:text-5xl">
-              Have a project in mind? Tell us about it.
+              Want to talk to TimeClimbers?
             </h2>
             <p className="mt-6 max-w-xl text-base text-base-content/70 md:text-lg">
-              We take on a handful of new engagements each quarter. The faster
-              we know what you&rsquo;re working on, the faster we can give you
-              an honest answer.
+              We answer our own email. Drop us a line about a product, an
+              opening, or just to say hello.
             </p>
 
             <div className="mt-10 flex flex-wrap items-center gap-4">
               <a
-                href="mailto:hello@timeclimbers.com?subject=New%20project"
+                href="mailto:hello@timeclimbers.com"
                 className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-3 text-sm font-medium text-primary-content transition-transform hover:-translate-y-0.5"
               >
                 hello@timeclimbers.com
                 <ArrowRightIcon className="h-4 w-4" />
               </a>
-              <span className="text-sm text-base-content/60">
-                Replies within one business day.
-              </span>
             </div>
           </div>
         </div>
