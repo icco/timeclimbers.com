@@ -57,7 +57,7 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <body className="antialiased font-sans bg-base-100 text-base-content">
-        <ThemeProvider defaultTheme="system" enableSystem>
+        <ThemeProvider>
           <WebVitals analyticsPath="/analytics/timeclimbers" />
           {children}
         </ThemeProvider>
