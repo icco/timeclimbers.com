@@ -9,7 +9,7 @@ WORKDIR /app
 # GitHub Packages, so we mount a token at build time and append the
 # auth header to .npmrc, then drop it before the layer is committed.
 RUN npm install -g pnpm@11.2.2
-COPY package.json pnpm-lock.yaml .npmrc ./
+COPY package.json pnpm-lock.yaml pnpm-workspace.yaml .npmrc ./
 RUN --mount=type=secret,id=npm_token \
     echo "//npm.pkg.github.com/:_authToken=$(cat /run/secrets/npm_token)" >> .npmrc && \
     pnpm install --frozen-lockfile && \
