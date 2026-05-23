@@ -8,7 +8,7 @@ WORKDIR /app
 # Install dependencies using pnpm. @icco/react-common is published to
 # GitHub Packages, so we mount a token at build time and append the
 # auth header to .npmrc, then drop it before the layer is committed.
-RUN corepack enable
+RUN npm install -g pnpm@11.2.2
 COPY package.json pnpm-lock.yaml .npmrc ./
 RUN --mount=type=secret,id=npm_token \
     echo "//npm.pkg.github.com/:_authToken=$(cat /run/secrets/npm_token)" >> .npmrc && \
@@ -24,7 +24,7 @@ COPY . .
 
 # Build the application
 ENV NEXT_TELEMETRY_DISABLED=1
-RUN corepack enable && pnpm build
+RUN npm install -g pnpm@11.2.2 && pnpm build
 
 # Production image
 FROM base AS runner
