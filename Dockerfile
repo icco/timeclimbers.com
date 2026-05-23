@@ -1,17 +1,18 @@
 # syntax=docker/dockerfile:1
-FROM node:25-alpine AS base
+FROM node:26-alpine AS base
 
 # Install dependencies only when needed
 FROM base AS deps
 WORKDIR /app
 
-# Install dependencies using yarn. @icco/react-common is published to
+# Install dependencies using pnpm. @icco/react-common is published to
 # GitHub Packages, so we mount a token at build time and append the
 # auth header to .npmrc, then drop it before the layer is committed.
-COPY package.json yarn.lock .npmrc .yarnrc ./
+RUN npm install -g pnpm@11.2.2
+COPY package.json pnpm-lock.yaml pnpm-workspace.yaml .npmrc ./
 RUN --mount=type=secret,id=npm_token \
     echo "//npm.pkg.github.com/:_authToken=$(cat /run/secrets/npm_token)" >> .npmrc && \
-    yarn install --frozen-lockfile --ignore-engines && \
+    pnpm install --frozen-lockfile && \
     rm -f .npmrc
 
 # Rebuild the source code only when needed
@@ -23,7 +24,7 @@ COPY . .
 
 # Build the application
 ENV NEXT_TELEMETRY_DISABLED=1
-RUN yarn build
+RUN npm install -g pnpm@11.2.2 && pnpm build
 
 # Production image
 FROM base AS runner
