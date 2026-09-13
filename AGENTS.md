@@ -16,7 +16,7 @@ Use pnpm:
 
 ## Architecture & Conventions
 
-- Application routes and views under `src/app/` or `pages/`.
+- Application routes and views are under `app/`, with shared UI components under `components/`.
 - UI components styled with Tailwind CSS and daisyUI (`@icco/react-common`).
 - PR titles and commits must follow Conventional Commits with lowercase subjects.
 - Ensure `pnpm lint` and `pnpm build` pass before submitting PRs.
