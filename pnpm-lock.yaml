@@ -15,8 +15,8 @@ importers:
         specifier: ^2.2.0
         version: 2.2.0(react@19.3.0)
       '@icco/react-common':
-        specifier: ^2026.10720.3
-        version: 2026.10720.3(@heroicons/react@2.2.0(react@19.3.0))(jsdom@30.0.1)(next@16.2.10(@babel/core@7.29.7)(react-dom@19.2.7(react@19.3.0))(react@19.3.0))(react-dom@19.2.7(react@19.3.0))(react@19.3.0)(typescript@6.0.3)
+        specifier: ^2026.10913.3
+        version: 2026.10913.3(@heroicons/react@2.2.0(react@19.3.0))(jsdom@30.0.1)(next@16.2.10(@babel/core@7.29.7)(react-dom@19.2.7(react@19.3.0))(react@19.3.0))(react-dom@19.2.7(react@19.3.0))(react@19.3.0)(typescript@6.0.3)
       daisyui:
         specifier: ^5.7.37
         version: 5.7.37
@@ -261,8 +261,8 @@ packages:
     resolution: {integrity: sha512-bV0Tgo9K4hfPCek+aMAn81RppFKv2ySDQeMoSZuvTASywNTnVJCArCZE2FWqpvIatKu7VMRLWlR1EazvVhDyhQ==}
     engines: {node: '>=18.18'}
 
-  '@icco/react-common@2026.10720.3':
-    resolution: {integrity: sha512-j0yBE8CNphtiEHxJ1v9XnPedFcMFCzFzCkkpngNBz55XLN9O4DUZZYR4JPMWGcL17XMHelpjFDkmXntICx/0MA==, tarball: https://npm.pkg.github.com/download/@icco/react-common/2026.10720.3/17a7368a72fb62dc7cf8bfd8116f9f0c28c036d2}
+  '@icco/react-common@2026.10913.3':
+    resolution: {integrity: sha512-xKygMlLDgzgwxOh/vFFjVwqx7szUkC+WGPIdx+HYArVwi8THcFmtLyMYl7jYYGh0i3l4TBjfMWAYJAjZQltSiQ==, tarball: https://npm.pkg.github.com/download/@icco/react-common/2026.10913.3/05fd6deacacb3cb0e6e6277355ef0f807a22259e}
     peerDependencies:
       '@heroicons/react': ^2.0.0
       jsdom: '>=20.0.0'
@@ -823,8 +823,8 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@wrksz/themes@1.0.0':
-    resolution: {integrity: sha512-UZ1mvFe9xXvxPCK/aXKVYbJCtI4gxM9J4orvDEZLdpk/9tvcbH2U8ZU3h5R1Pwjjjf4Q3um0wK4o+wqj3Vv40Q==}
+  '@wrksz/themes@1.2.0':
+    resolution: {integrity: sha512-jAyeKHnhvouLTsNCbTZXXX45gCYIJ3eLAFgktIdYHRotGz4ufhs8PMQd3baiZO0EPIXyf0vzPlasbuOfM5J5Gg==}
     peerDependencies:
       next: '>=16.0.0'
       react: ^18.0.0 || ^19.0.0
@@ -2368,10 +2368,10 @@ snapshots:
 
   '@humanwhocodes/retry@0.4.3': {}
 
-  '@icco/react-common@2026.10720.3(@heroicons/react@2.2.0(react@19.3.0))(jsdom@30.0.1)(next@16.2.10(@babel/core@7.29.7)(react-dom@19.2.7(react@19.3.0))(react@19.3.0))(react-dom@19.2.7(react@19.3.0))(react@19.3.0)(typescript@6.0.3)':
+  '@icco/react-common@2026.10913.3(@heroicons/react@2.2.0(react@19.3.0))(jsdom@30.0.1)(next@16.2.10(@babel/core@7.29.7)(react-dom@19.2.7(react@19.3.0))(react@19.3.0))(react-dom@19.2.7(react@19.3.0))(react@19.3.0)(typescript@6.0.3)':
     dependencies:
       '@heroicons/react': 2.2.0(react@19.3.0)
-      '@wrksz/themes': 1.0.0(next@16.2.10(@babel/core@7.29.7)(react-dom@19.2.7(react@19.3.0))(react@19.3.0))(react-dom@19.2.7(react@19.3.0))(react@19.3.0)(typescript@6.0.3)
+      '@wrksz/themes': 1.2.0(next@16.2.10(@babel/core@7.29.7)(react-dom@19.2.7(react@19.3.0))(react@19.3.0))(react-dom@19.2.7(react@19.3.0))(react@19.3.0)(typescript@6.0.3)
       jsdom: 30.0.1
       next: 16.2.10(@babel/core@7.29.7)(react-dom@19.2.7(react@19.3.0))(react@19.3.0)
       react: 19.3.0
@@ -2811,7 +2811,7 @@ snapshots:
   '@unrs/resolver-binding-win32-x64-msvc@1.12.2':
     optional: true
 
-  '@wrksz/themes@1.0.0(next@16.2.10(@babel/core@7.29.7)(react-dom@19.2.7(react@19.3.0))(react@19.3.0))(react-dom@19.2.7(react@19.3.0))(react@19.3.0)(typescript@6.0.3)':
+  '@wrksz/themes@1.2.0(next@16.2.10(@babel/core@7.29.7)(react-dom@19.2.7(react@19.3.0))(react@19.3.0))(react-dom@19.2.7(react@19.3.0))(react@19.3.0)(typescript@6.0.3)':
     dependencies:
       react: 19.3.0
       react-dom: 19.2.7(react@19.3.0)
