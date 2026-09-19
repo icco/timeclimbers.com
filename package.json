@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@heroicons/react": "^2.2.0",
-    "@icco/react-common": "^2026.10720.3",
+    "@icco/react-common": "^2026.10913.3",
     "daisyui": "^5.7.37",
     "jsdom": "^30.0.1",
     "next": "^16.2.10",
