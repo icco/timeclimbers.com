@@ -1,31 +1,31 @@
 import {
-  CloudIcon,
-  CodeBracketSquareIcon,
-  DevicePhoneMobileIcon,
-  PaintBrushIcon,
-} from "@heroicons/react/24/outline";
+  Cloud,
+  SquareCode,
+  Smartphone,
+  Paintbrush,
+} from "lucide-react";
 
 const capabilities = [
   {
-    icon: CodeBracketSquareIcon,
+    icon: SquareCode,
     name: "Web applications",
     description:
       "Marketing sites, dashboards, and internal tools built with Next.js and TypeScript on a design system we extend across every product.",
   },
   {
-    icon: DevicePhoneMobileIcon,
+    icon: Smartphone,
     name: "Mobile applications",
     description:
       "Native and cross-platform apps for iOS and Android, designed for daily use and shipped through stores we have been publishing to for years.",
   },
   {
-    icon: CloudIcon,
+    icon: Cloud,
     name: "Cloud & infrastructure",
     description:
       "Boring, well-instrumented infrastructure on GCP, Cloudflare, and Fly. Clear pipelines, real observability, and runbooks the on-call can read at 3am.",
   },
   {
-    icon: PaintBrushIcon,
+    icon: Paintbrush,
     name: "Product design",
     description:
       "Interfaces, brands, and design systems that hold up across web and mobile. We design the things we build, end to end.",
