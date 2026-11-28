@@ -1,4 +1,4 @@
-import { ArrowRightIcon } from "@heroicons/react/24/outline";
+import { ArrowRight } from "lucide-react";
 
 export default function Hero() {
   return (
@@ -29,7 +29,7 @@ export default function Hero() {
               className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-3 text-sm font-medium text-primary-content transition-transform hover:-translate-y-0.5"
             >
               What we build
-              <ArrowRightIcon className="h-4 w-4" />
+              <ArrowRight className="h-4 w-4" />
             </a>
             <a
               href="#about"
